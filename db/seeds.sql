@@ -1,4 +1,4 @@
--- Start mysql server: $ mysql -u root -p
+--$ mysql -u root -p
 INSERT INTO burger (name) VALUES ('Baconator');
 INSERT INTO burger (name) VALUES ('Bleu Cheese');
 INSERT INTO burger (name, devoured) VALUES ('Double with Cheese', true);
