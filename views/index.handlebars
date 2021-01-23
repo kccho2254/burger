@@ -1,0 +1,22 @@
+<h1>Burgers!!!</h1>
+
+
+<h2>Burgers that aren't devoured!</h2>
+
+<ul>
+  {{#each burger}}
+    {{#unless this.devoured}}
+      <li>{{this.id}} : {{this.name}}</li>
+    {{/unless}}
+  {{/each}}
+</ul>
+
+<h2>Burgers that are devoured!</h2>
+
+<ul>
+  {{#each burger}}
+    {{#if this.devoured}}
+        <li>{{this.id}} : {{this.name}}</li>
+    {{/if}}
+  {{/each}}
+</ul>
