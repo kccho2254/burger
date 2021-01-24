@@ -1,23 +1,28 @@
-<h1>Burgers!!!</h1>
+<h1>Burger Logger</h1>
 
 
-<h2>Burgers that aren't devoured!</h2>
+<h2>Burgers that aren't devoured</h2>
 
 <ul>
   {{#each burger}}
     {{#unless devoured}}
-       {{ > burgers/list-item newdevour=true }}
+    <li>{{this.id}} : {{this.name}} : 
+        <button class="change-existence" data-id="{{this.id}}" data-newdevour="{{this.name}}">Consume</button>
+      </li>
     {{/unless}}
   {{/each}}
 </ul>
 
 
-<h2>Burgers that are devoured!</h2>
+
+<h2>Burgers that are devoured</h2>
 
 <ul>
   {{#each burger}}
     {{#if devoured}}
-       {{ > burgers/list-item newdevour=false }}
+     <li>{{this.id}} : {{this.name}} : 
+       <button class="delete-burg" data-id="{{this.id}}">Throw away</button>
+      </li>
     {{/if}}
   {{/each}}
 </ul>
