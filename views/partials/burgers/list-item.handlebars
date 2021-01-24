@@ -1,11 +1,15 @@
 <li>
-	{{ name }}
+    {{name}}
 
-<button class="change-existence" data-id="{{ this.id }}" data-newDevoured="{{ this.name }}">
-    {{#if exists}}NOT EATEN!{{ else }}EATEN!
-    {{/if}}
-</button>
+    <button class="change-existence" data-id="{{id}}" data-newdevour="{{ name }}">
+        {{#if exists}}NOT EATEN!{{else}}EATEN!
+        {{/if}}
+    </button>
 
-<button class="delete-burger" data-id="{{ this.id }}">DELETE!</button>
+    <button class="delete-burg" data-id="{{this.id}}">THROW AWAY!</button>
 
-</li> 
+</li>
+
+ {{!-- <li>{{this.id}} : {{this.name}} : 
+        <button class="change-existence" data-id="{{this.id}}" data-newdevour="{{this.name}}">CONSUME!</button>
+      </li> --}}
